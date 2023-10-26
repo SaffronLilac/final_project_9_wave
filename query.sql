@@ -1,10 +1,10 @@
 Задание 1
 
-SELECT с.login, COUNT(*) AS total_orders_in_delivery
-FROM "Couriers" AS с
-LEFT JOIN "Orders" AS о ON с."courierId" = о."courierId"
-WHERE о."inDelivery" = true
-GROUP BY с.login;
+SELECT c.login, COUNT(*) AS total_orders_in_delivery
+FROM "Couriers" AS c
+LEFT JOIN "Orders" AS o ON c."id" = o."courierId"
+WHERE o."inDelivery" = true
+GROUP BY c.login;
 
 Задание 2
 
